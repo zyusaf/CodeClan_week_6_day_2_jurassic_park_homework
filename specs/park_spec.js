@@ -5,6 +5,8 @@ const Dinosaur = require('../models/dinosaur.js');
 describe('Park', function() {
 
   let park;
+  let dinosaur1;
+  let dinosaur2;
 
   beforeEach(function () {
     park = new Park("Jurassic Park", 80);
@@ -45,7 +47,6 @@ describe('Park', function() {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     const actual = park.findMostVisited();
-    console.log(actual);
     assert.deepStrictEqual(actual, dinosaur1);
   });
 
@@ -74,7 +75,7 @@ describe('Park', function() {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     const actual = park.calcTotalRevenuePerYear();
-    assert.strictEqual(actual, 3212000)
+    assert.strictEqual(actual, 3212000);
   });
 
 });

@@ -16,9 +16,9 @@ Park.prototype.removeDinosaur = function (dinosaur) {
 Park.prototype.findMostVisited = function () {
     let maxGuest = this.dinosaurCollection[0];
 
-    for (i = 0; i < this.dinosaurCollection.length; i++){
-        if (this.dinosaurCollection[i].guestsAttractedPerDay > maxGuest.guestsAttractedPerDay)
-            maxGuest = this.dinosaurCollection[i]
+    for (const dino of this.dinosaurCollection){
+        if (this.dinosaurCollection.guestsAttractedPerDay > maxGuest.guestsAttractedPerDay)
+            maxGuest = dino
     }
 
     return maxGuest
